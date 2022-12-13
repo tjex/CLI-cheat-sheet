@@ -1,0 +1,5 @@
+nvim shortcut and command ref
+-----------------------------
+
+vipga= | align all selected around =
+
