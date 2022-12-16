@@ -25,3 +25,4 @@ zsh -o SOURCE_TRACE -lic ''                            | lists all files that ge
 CRYPTO
 Compare sha256 - Note: two spaces are required between string and file path.
 diff -is <(echo "<provided sha256 string>  /path/to/downloaded.pkg") <(shasum -a 256 /path/to/downloaded.pkg)
+
