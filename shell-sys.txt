@@ -1,0 +1,28 @@
+shell commands
+
+FILES and FOLDERS
+su -sh                                                 | size of curr. folder
+ll                                                     | list contents in rows
+ln -s /path/to/source /path/to/dest                    | create a symbolic link of [source] at [dest]
+
+RESTIC
+init --repo /path/to                                   | make a new backup repo
+-r /path/to/repo --verbose backup /backup/source       | make a backup
+-r /path/to/repo snapshots <--path"/foo/bar">          | see snapshots
+-r /path/to/repo forget [id] !!!then you need to prune | delete a snapshot
+-r /path/t/repo prune                                  | prune (clean up)
+
+NETWORK
+kill -9 [pid]                                          | kill the process of that PID (sourced from lsof)
+lsof -i :[portnumber]                                  | list whats happening on that network port
+
+AUTOMATION
+crontab -e                                             | open cron jobs
+
+ZSH / SHELL ENVIRONMENT
+zsh -o SOURCE_TRACE -lic ''                            | lists all files that get sourced by shell
+
+CRYPTO
+Compare sha256 - Note: two spaces are required between string and file path.
+diff -is <(echo "<provided sha256 string>  /path/to/downloaded.pkg") <(shasum -a 256 /path/to/downloaded.pkg)
+
